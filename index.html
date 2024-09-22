@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Team Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register Your Team</h1>
+        <form name="team-registration" method="POST" data-netlify="true" onsubmit="return validateFlag()">
+            <p>
+                <label>Team Name: <input type="text" name="team-name" required /></label>
+            </p>
+            <p>
+                <label>Flag: <input type="text" id="team-flag" name="team-flag" required /></label>
+            </p>
+            <p>
+                <button type="submit">Submit Your FLAG!</button>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        function validateFlag() {
+            const validFlags = [
+                'RkxBRyAx',
+                'RkxBRyAy',
+                'RkxBRyAz',
+                'RkxBRyA0',
+                'RkxBRyA1',
+                'RkxBRyA2',
+                'RkxBRyA3',
+                'RkxBRyA4',
+                'RkxBRyA5',
+                'RkxBRyEw',
+                'RkxBRyEx',
+                'RkxBRyEy',
+                'RkxBRyEz',
+                'RkxBRyE0',
+                'RkxBRyE1',
+                'RkxBRyE2',
+                'RkxBRyE3',
+                'RkxBRyE4',
+                'RkxBRyE5',
+                'RkxBRyEw'
+            ]; // Add your valid flags here
+
+            const flagInput = document.getElementById('team-flag').value;
+
+            if (validFlags.includes(flagInput)) {
+                // Redirect to the congratulations page
+                window.location.href = 'flag.html';
+                return false; // Prevent default form submission
+            } else {
+                alert("Error: Invalid flag. Please enter a valid flag!");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+
+</html>

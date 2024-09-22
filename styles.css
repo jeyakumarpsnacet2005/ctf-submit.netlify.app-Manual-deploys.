@@ -1,0 +1,69 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('ctf.jpg');
+    /* Replace with your local image file name */
+    background-size: cover;
+    /* Ensure the image covers the entire background */
+    background-position: center;
+    /* Center the image */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+    width: 30%;
+    max-width: 300px;
+    font-size: 1em;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF5722;
+    box-shadow: 0 0 5px #FF5722;
+}
+
+button {
+    background-color: #FF5722;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #FF3D00;
+    transform: scale(1.05);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
